@@ -70,3 +70,20 @@ print(newList)
 # To clear a list
 newList.clear()
 print(newList)
+
+
+# Tuples - Immutable; only allows methods that do not change tuple structure
+print("Tuples and their common methods")
+Tuple = (1, 2, 3, 4)
+
+# To print
+print(Tuple)
+
+# To print specific index or slice
+print(Tuple[-3:])
+
+# To get count of value v
+print(Tuple.count(1))
+
+# To get index of first occurrence of value v
+print(Tuple.index(1))
