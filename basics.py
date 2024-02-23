@@ -71,6 +71,10 @@ print(newList)
 newList.clear()
 print(newList)
 
+# Also possible to construct list using list comprehension
+newList = [x for x in range(1, 11, 1)]
+print(newList)
+
 
 # Tuples - Immutable; only allows methods that do not change tuple structure
 print("Tuples and their common methods")
