@@ -91,3 +91,35 @@ print(Tuple.count(1))
 
 # To get index of first occurrence of value v
 print(Tuple.index(1))
+
+
+# Set - mutable, non-duplicating list, involves hashing and essentially returning 1 value for a key which will store duplicates
+print("Sets and their common methods")
+# Sets can be created using set(list)
+Set = set([1, 2, 3, 4, 4, 4])
+print(Set)
+
+# To add elements to a set
+Set.add(5)
+Set.add(5) # This gets ignored eventually
+print(Set)
+
+# To get the difference between Set1 and Set2
+Set1 = Set.copy()
+Set2 = set([1, 2, 3, 4, 5, 6])
+print(Set1.difference(Set2)) # No difference since all elements in Set1 are present in Set2
+print(Set2.difference(Set1)) # Extra element in Set2 gets returned
+
+# To get intersection
+print(Set1.intersection(Set2))
+
+# To get union
+print(Set1.union(Set2))
+
+# To clear out all elements
+Set1.clear()
+print(Set1)
+
+# To pop first item (NO INDEX CAN BE SPECIFIED)
+print(Set2.pop())
+print(Set2)
