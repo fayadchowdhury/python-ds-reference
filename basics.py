@@ -123,3 +123,44 @@ print(Set1)
 # To pop first item (NO INDEX CAN BE SPECIFIED)
 print(Set2.pop())
 print(Set2)
+
+
+# Dictionaries - key, value stores, unordreed, mutable, can hold different data types
+print("Dictionaries and their common methods")
+# Dictionaries can be created very simply like so
+dict1 = {
+    "name": "John Doe",
+    "age": 42,
+    "city": "Dhaka"
+}
+print(dict1)
+
+# To access key in dictionary
+dict1["name"] = "John Doe 2"
+print(dict1["name"])
+# Or
+print(dict1.get("location", "No value found for that key")) # Looks for key and returns default value if not found
+
+# To access items in list of (key, value) tuples
+print(dict1.items())
+
+# To access keys
+print(dict1.keys())
+
+# To access values
+print(dict1.values())
+
+# To iterate over dictionary
+for key, value in dict1.items():
+    print(key, value)
+
+# To add new key (update)    
+dict1.update({
+    "name_alt": "Johnny Doe"
+})
+
+print(dict1)
+
+# It is also possible to create dictionaries using dictionary comprehension
+dict2 = {f"key {i}": i for i in range(10)}
+print(dict2)
