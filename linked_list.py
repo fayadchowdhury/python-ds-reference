@@ -40,7 +40,7 @@ class LinkedList():
                 curr = curr.next
             curr.next = copy.deepcopy(node)
     
-    def delete(self, value):
+    def delete_value(self, value):
         curr = self.head
         prev = None
         while ( curr != None ):
@@ -51,6 +51,20 @@ class LinkedList():
             prev = curr
             curr = curr.next
         print("Value not found in list :(")
+        
+    def delete_index(self, index):
+        curr = self.head
+        prev = None
+        counter = 0
+        while ( counter != index ):
+            if ( curr.next != None ):
+                prev = curr
+                curr = curr.next
+                counter += 1
+            else:
+                print("Index out of bounds")
+                return
+        prev.next = curr.next
     
     def reverse(self):
         curr = self.head
@@ -86,6 +100,6 @@ def main():
     
     ll.traverse()
     
-    ll.delete(6)
+    ll.delete_index(5)
     ll.traverse()
 main()
